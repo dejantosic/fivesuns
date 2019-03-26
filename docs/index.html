@@ -9,7 +9,11 @@
      })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
 
      ga('create', 'UA-136802482-1 ', 'auto');
-//     ga('send', 'pageview');
+
+     function test() {
+      alert('oh hi to you to good sir!');
+      ga('send', 'pageview');
+     }
     </script>
     
   </head>
@@ -17,7 +21,7 @@
 
     oh hi world
     <br />
-    <button onclick="alert(oh hi to you to good sir!)">Wave</button>
+    <button onclick="test()">Wave</button>
       
   </body>
 </html> 
