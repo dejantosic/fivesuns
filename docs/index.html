@@ -13,8 +13,14 @@
       ga('send', 'pageview');
 
      function trackStep(action, label) {
+
+      // event tracking
       var category = "CampaignDesigner";
       ga('send', 'event', category, action, label);
+
+      // virtual page view tracking
+      ga('set', 'page', action);
+      ga('send', 'pageview');
      }
     </script>
 
