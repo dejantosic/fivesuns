@@ -3,6 +3,10 @@
   <head>
    
     <script>
+      function randomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -40,30 +44,30 @@
 
     <h3>1. Campaign details</h3>
     
-    <button onclick='trackStep("CampaignName", "Scolville 20.000")'>Campaign name: Scolville 20.000</button><br />
-    <button onclick='trackStep("CampaignPurpose", "1")'>Campaign purpose: 1</button><br />
-    <button onclick='trackStep("ProductCategory", "5")'>Product category: 5</button><br />
+    <button onclick='trackStep("CampaignName", "Random campaign " + randomInt(1000))'>Campaign name: Random campaign X</button><br />
+    <button onclick='trackStep("CampaignPurpose", randomInt(3))'>Campaign purpose: X</button><br />
+    <button onclick='trackStep("ProductCategory", randomInt(10))'>Product category: X</button><br />
     <button onclick='trackStep("CampaignStartDate", "2019.06.12")'>Campaign start date: 2019.06.12</button><br />
-    <button onclick='trackStep("CampaignBudget", 37420)'>Campaign budget: 37420</button><br />
+    <button onclick='trackStep("CampaignBudget", randomInt(100000))'>Campaign budget: X</button><br />
     
     <hr />
 
     <h3>2. Estimator</h3>
 
-    <button onclick='trackStep("ConversionRate", 2.3)'>Conversion rate: 2.3</button><br />
-    <button onclick='trackStep("ConversionRateIndustryAverage", 0.8)'>Conversion rate industry average: 0.8</button><br />
-    <button onclick='trackStep("CustomerLifetimeValue", 12300)'>Customer lifetime value: 12300</button><br />
-    <button onclick='trackStep("CustomerSpendingPerMonth", 125)'>Customer spending per month: 125</button><br />
-    <button onclick='trackStep("MonthlyChurnRate", 1.15)'>Monthly churn rate: 1.15</button><br />
-    <button onclick='trackStep("MonthlyChurnRateIndustryAverage", 4.1)'>Monthly churn rate industry average: 4.1</button><br />
+    <button onclick='trackStep("ConversionRate", randomInt(10))'>Conversion rate: X</button><br />
+    <button onclick='trackStep("ConversionRateIndustryAverage", randomInt(10))'>Conversion rate industry average: X</button><br />
+    <button onclick='trackStep("CustomerLifetimeValue", randomInt(10000))'>Customer lifetime value: X</button><br />
+    <button onclick='trackStep("CustomerSpendingPerMonth", randomInt(500))'>Customer spending per month: X</button><br />
+    <button onclick='trackStep("MonthlyChurnRate", randomInt(100))'>Monthly churn rate: X</button><br />
+    <button onclick='trackStep("MonthlyChurnRateIndustryAverage", randomInt(100))'>Monthly churn rate industry average: X</button><br />
     
     <hr />
 
     <h3>3. Audience</h3>
 
     <button onclick='trackStep("AudienceTargetGeography", "USA")'>Audience target geography: USA</button><br />
-    <button onclick='trackStep("AudienceTargetGender", 2)'>Audience target gender: 2</button><br />
-    <button onclick='trackStep("AudienceTargetAgeGroupId", 7)'>Audience target age group id: 7</button><br />
+    <button onclick='trackStep("AudienceTargetGender", randomInt(3))'>Audience target gender: X</button><br />
+    <button onclick='trackStep("AudienceTargetAgeGroupId", randomInt(10))'>Audience target age group id: X</button><br />
 
     <hr />
 
@@ -72,7 +76,7 @@
     <button onclick='trackStep("CompanyName")'>Company name</button><br />
     <button onclick='trackStep("ContactName")'>Contact name</button><br />
     <button onclick='trackStep("ContactEmail")'>Contact email</button><br />
-    <button onclick='trackStep("BusinessCateogry", 3)'>Business category id: 3</button><br />
+    <button onclick='trackStep("BusinessCateogry", randomInt(10))'>Business category id: X</button><br />
     <button onclick='trackStep("CompanyWebsite")'>Company website</button><br />
     <button onclick='trackStep("ContactTitle", "Marketing Manager")'>Contact title: Marketing Manager</button><br />
     <button onclick='trackStep("ContactPhone")'>Contact phone</button><br />
