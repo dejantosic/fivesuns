@@ -17,21 +17,68 @@
       ga('send', 'event', category, action, label);
      }
     </script>
+
+    <style type="text/css">
+      body {
+        font-family: Helveica, Arial, sans-serif;
+      }
+
+      button {
+        margin: 5px;
+        padding: 3px;
+      }
+    </style>
     
   </head>
   <body>
 
-    oh hi world
-    <br />
-    <button onclick='trackStep("CampaignName", "Super stuff")'>Campaign name: Super stuff</button><br />
-    <button onclick='trackStep("CampaignBudget", 12500)'>Campaign budget: 12500</button><br />
-    <button onclick='trackStep("AudienceTargetGender", 2)'>Audience target gender: 2</button><br />
-    <button onclick='trackStep("BusinessCategory", 4)'>Business category: 4</button><br />
+    <h3>1. Campaign details</h3>
     
-    <button onclick='trackStep("PaymentSuccessful", "yes")'>Payment successful: yes</button><br />
-    <button onclick='trackStep("PaymentSuccessful", "no")'>Payment successful: no</button><br />
+    <button onclick='trackStep("CampaignName", "Scolville 20.000")'>Campaign name: Scolville 20.000</button><br />
+    <button onclick='trackStep("CampaignPurpose", "1")'>Campaign purpose: 1</button><br />
+    <button onclick='trackStep("ProductCategory", "5")'>Product category: 5</button><br />
+    <button onclick='trackStep("CampaignStartDate", "2019.06.12")'>Campaign start date: 2019.06.12</button><br />
+    <button onclick='trackStep("CampaignBudget", 37420)'>Campaign budget: 37420</button><br />
+    
+    <hr />
+
+    <h3>2. Estimator</h3>
+
+    <button onclick='trackStep("ConversionRate", 2.3)'>Conversion rate: 2.3</button><br />
+    <button onclick='trackStep("ConversionRateIndustryAverage", 0.8)'>Conversion rate industry average: 0.8</button><br />
+    <button onclick='trackStep("CustomerLifetimeValue", 12300)'>Customer lifetime value: 12300</button><br />
+    <button onclick='trackStep("CustomerSpendingPerMonth", 125)'>Customer spending per month: 125</button><br />
+    <button onclick='trackStep("MonthlyChurnRate", 1.15)'>Monthly churn rate: 1.15</button><br />
+    <button onclick='trackStep("MonthlyChurnRateIndustryAverage", 4.1)'>Monthly churn rate industry average: 4.1</button><br />
+    
+    <hr />
+
+    <h3>3. Audience</h3>
+
+    <button onclick='trackStep("AudienceTargetGeography", "USA")'>Audience target geography: USA</button><br />
+    <button onclick='trackStep("AudienceTargetGender", 2)'>Audience target gender: 2</button><br />
+    <button onclick='trackStep("AudienceTargetAgeGroupId", 7)'>Audience target age group id: 7</button><br />
+
+    <hr />
+
+    <h3>4. Your company details</h3>
+
+    <button onclick='trackStep("CompanyName")'>Company name</button><br />
+    <button onclick='trackStep("ContactName")'>Contact name</button><br />
+    <button onclick='trackStep("ContactEmail")'>Contact email</button><br />
+    <button onclick='trackStep("BusinessCateogry", 3)'>Business category id: 3</button><br />
+    <button onclick='trackStep("CompanyWebsite")'>Company website</button><br />
+    <button onclick='trackStep("ContactTitle", "Marketing Manager")'>Contact title: Marketing Manager</button><br />
+    <button onclick='trackStep("ContactPhone")'>Contact phone</button><br />
+
+    <hr />
+
+    <h3>5. Payment and download</h3>
+
+    <button onclick='trackStep("PaymentSuccessful")'>Payment successful</button><br />
+    <button onclick='trackStep("PaymentNotSuccessful")'>Payment NOT successful</button><br />
 
     <button onclick='trackStep("PdfDownloadClick")'>Pdf download clicked</button><br />
-      
+
   </body>
 </html> 
